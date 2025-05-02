@@ -46,8 +46,7 @@ h1 {
     white-space: nowrap;
     border-right: 3px solid #00fff7;
     width: 0;
-    animation: typewriter 2s steps(30) forwards,
-        cursor-blink 0.75s step-end infinite;
+    animation: typewriter 2s steps(30) forwards, cursor-blink 0.75s step-end infinite;
     margin: 0 auto;
     max-width: fit-content;
 }
@@ -398,4 +397,10 @@ body {
 .skill:hover {
     transform: translateY(-5px);
     color: #00fff7;
+}
+
+@media  screen and (max-width : 530px) {
+    .profile-card h1{
+        font-size: 20px;
+    }
 }
