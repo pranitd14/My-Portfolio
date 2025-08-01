@@ -89,20 +89,6 @@ body {
   }
 }
 
-.blob {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, #00fff7cc, #0044ff99);
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.6;
-  animation: blob-move 12s infinite ease-in-out;
-  z-index: 1;
-}
-
 @keyframes blob-move {
   0% {
     transform: translate(-50%, -50%) scale(1);
