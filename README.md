@@ -42,7 +42,7 @@ A streamlined anime streaming and download site built using PHP, MySQL, and Mega
 ##  Social Profiles
 
 - **GitHub:** [pranitd14](https://github.com/pranitd14)  
-- **LinkedIn:** [pranitd14](www.linkedin.com/in/pranitd14)
+- **LinkedIn:**[(www.linkedin.com/in/pranitd14)](https://www.linkedin.com/in/pranitd14/)
 - **SoloLearn:** *(Add your SoloLearn profile URL)*
 
 ---
