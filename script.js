@@ -247,6 +247,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Parallax effect for blobs
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const parallaxElements = document.querySelectorAll('.blob');
+        
+        parallaxElements.forEach((element, index) => {
+            const speed = 0.5 + (index * 0.2);
+            const yPos = -(scrolled * speed);
+            element.style.transform = `translateY(${yPos}px)`;
+        });
+    });
+
     // Add hover effects to project cards
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach(card => {
@@ -338,8 +350,25 @@ document.addEventListener('DOMContentLoaded', function() {
         cursor.style.display = 'none';
     }
 
-    // Initialize ScrollReveal for additional animations
-    if (typeof ScrollReveal !== 'undefined') {
+    // Disable parallax on mobile for better performance
+    const isMobile = window.innerWidth <= 768;
+    
+    if (!isMobile) {
+        // Parallax effect for blobs
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.blob');
+            
+            parallaxElements.forEach((element, index) => {
+                const speed = 0.5 + (index * 0.2);
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
+            });
+        });
+    }
+
+    // Initialize ScrollReveal for additional animations (disabled on mobile for performance)
+    if (typeof ScrollReveal !== 'undefined' && window.innerWidth > 768) {
         ScrollReveal().reveal('.feature-item', {
             delay: 200,
             distance: '50px',
