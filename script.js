@@ -54,11 +54,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Loading screen
     const loadingScreen = document.querySelector('.loading-screen');
     
+    let loaderTimer = null;
+
+    function hideLoader() {
+        if (!loadingScreen) return;
+        loadingScreen.classList.add('hidden');
+    }
+
+    // Hide on full load
     window.addEventListener('load', function() {
-        setTimeout(() => {
-            loadingScreen.classList.add('hidden');
-        }, 1500);
+        loaderTimer = setTimeout(hideLoader, 1500);
     });
+
+    // Safety: hide if load is delayed/blocked
+    setTimeout(() => {
+        hideLoader();
+    }, 6000);
 
     // Navigation functionality
     const navbar = document.querySelector('.navbar');
@@ -236,10 +247,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 2000);
 
     // Parallax effect for blobs
+    // (kept only once; later in the file it is conditionally re-applied for non-mobile)
     window.addEventListener('scroll', function() {
         const scrolled = window.pageYOffset;
         const parallaxElements = document.querySelectorAll('.blob');
-        
+
         parallaxElements.forEach((element, index) => {
             const speed = 0.5 + (index * 0.2);
             const yPos = -(scrolled * speed);
@@ -247,29 +259,157 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Parallax effect for blobs
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const parallaxElements = document.querySelectorAll('.blob');
-        
-        parallaxElements.forEach((element, index) => {
-            const speed = 0.5 + (index * 0.2);
-            const yPos = -(scrolled * speed);
-            element.style.transform = `translateY(${yPos}px)`;
-        });
-    });
 
-    // Add hover effects to project cards
+    // Project UI: filter + modal + neon timeline + tilt
     const projectCards = document.querySelectorAll('.project-card');
+
+    function getProjectFromCard(card) {
+        return {
+            id: card.getAttribute('data-project-id'),
+            category: card.getAttribute('data-category'),
+            title: card.querySelector('.project-title')?.textContent?.trim() || 'Project',
+            description: card.querySelector('.project-description')?.textContent?.trim() || '',
+            tags: Array.from(card.querySelectorAll('.tech-tag')).map(t => t.textContent.trim()),
+            github: card.getAttribute('data-github') || '#',
+            live: card.getAttribute('data-live') || '#'
+        };
+    }
+
+    // Filters
+    const filtersRoot = document.querySelector('.projects-filters');
+    if (filtersRoot) {
+        const filterChips = Array.from(filtersRoot.querySelectorAll('.filter-chip'));
+
+        filterChips.forEach(chip => {
+            chip.addEventListener('click', function() {
+                filterChips.forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+                projectCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    const show = filter === 'All' || category === filter;
+                    card.style.display = show ? '' : 'none';
+                });
+            });
+        });
+    }
+
+    // Modal
+    const modalOverlay = document.getElementById('project-modal');
+    const modalCloseBtn = document.querySelector('[data-close-modal]');
+    const modalCategoryEl = document.getElementById('project-modal-category');
+    const modalTitleEl = document.getElementById('project-modal-title');
+    const modalDescEl = document.getElementById('project-modal-description');
+    const modalTechEl = document.getElementById('project-modal-tech');
+    const modalGithubEl = document.getElementById('project-modal-github');
+    const modalLiveEl = document.getElementById('project-modal-live');
+
+    let lastFocusedEl = null;
+
+    function openModalForCard(card) {
+        if (!modalOverlay || !card) return;
+        lastFocusedEl = document.activeElement;
+
+        const project = getProjectFromCard(card);
+
+        modalCategoryEl.textContent = project.category || 'Project';
+        modalTitleEl.textContent = project.title;
+        modalDescEl.textContent = project.description;
+
+        modalTechEl.innerHTML = project.tags
+            .map(t => `<span class="tech-tag">${t}</span>`)
+            .join('');
+
+        modalGithubEl.href = project.github;
+        modalLiveEl.href = project.live;
+
+        // Set accent bar color per project
+        const accentBar = document.getElementById('modal-accent-bar');
+        if (accentBar) {
+            const banner = card.querySelector('.project-banner');
+            const bannerClass = banner ? [...banner.classList].find(c => c.startsWith('banner-') && c !== 'banner-glow') : null;
+            const gradients = {
+                'banner-anime':   'linear-gradient(90deg, #6b0fa8, #00fff7)',
+                'banner-news':    'linear-gradient(90deg, #0d7a3e, #00e5ff)',
+                'banner-android': 'linear-gradient(90deg, #0055a5, #3ddc84)'
+            };
+            accentBar.style.background = gradients[bannerClass] || 'linear-gradient(135deg, #00fff7, #0044ff)';
+        }
+
+        modalOverlay.classList.add('open');
+        modalOverlay.setAttribute('aria-hidden', 'false');
+        modalCloseBtn?.focus();
+
+        projectCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+    }
+
+    function closeModal() {
+        if (!modalOverlay) return;
+        modalOverlay.classList.remove('open');
+        modalOverlay.setAttribute('aria-hidden', 'true');
+        projectCards.forEach(c => c.classList.remove('active'));
+        if (lastFocusedEl && lastFocusedEl.focus) lastFocusedEl.focus();
+    }
+
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeModal();
+        });
+
+        if (modalCloseBtn) {
+            modalCloseBtn.addEventListener('click', closeModal);
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    }
+
+    // Open modal from card/button
     projectCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
+        // click on details button
+        const btn = card.querySelector('[data-open-modal]');
+        if (btn) {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openModalForCard(card);
+            });
+        }
+
+        // keyboard activation
+        card.addEventListener('click', () => openModalForCard(card));
     });
+
+
+    const isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+        projectCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const px = (x / rect.width) * 100;
+                const py = (y / rect.height) * 100;
+
+                card.style.setProperty('--mx', `${px}%`);
+                card.style.setProperty('--my', `${py}%`);
+
+                const rotateY = ((x - rect.width / 2) / rect.width) * 10;
+                const rotateX = -((y - rect.height / 2) / rect.height) * 10;
+
+                card.style.transform = `translateY(-10px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.015)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.removeProperty('--mx');
+                card.style.removeProperty('--my');
+                card.style.transform = '';
+            });
+        });
+    }
+
 
     // Add ripple effect to buttons
     function createRipple(event) {
@@ -350,21 +490,9 @@ document.addEventListener('DOMContentLoaded', function() {
         cursor.style.display = 'none';
     }
 
-    // Disable parallax on mobile for better performance
-    const isMobile = window.innerWidth <= 768;
-    
-    if (!isMobile) {
-        // Parallax effect for blobs
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.blob');
-            
-            parallaxElements.forEach((element, index) => {
-                const speed = 0.5 + (index * 0.2);
-                const yPos = -(scrolled * speed);
-                element.style.transform = `translateY(${yPos}px)`;
-            });
-        });
+    // Hide cursor trail on mobile
+    if (window.innerWidth <= 768) {
+        cursor.style.display = 'none';
     }
 
     // Initialize ScrollReveal for additional animations (disabled on mobile for performance)

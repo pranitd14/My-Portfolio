@@ -18,7 +18,8 @@
     <!-- Loading Screen -->
     <div class="loading-screen">
         <div class="loader">
-            <div class="loader-text">Loading</div>
+                    <div class="loader-text">Loading</div>
+                    
             <div class="loader-dots">
                 <span></span>
                 <span></span>
@@ -152,6 +153,7 @@
             </div>
         </div>
     </section>
+
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
         <div class="container">
@@ -327,105 +329,126 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">My Projects</h2>
-                <div class="section-subtitle">Some of my work</div>
+                <div class="section-subtitle">A showcase of what I've built</div>
             </div>
-            <div class="projects-grid">
+
+            <!-- Filter Bar -->
+            <div class="projects-filters" role="tablist" aria-label="Project categories">
+                <button class="filter-chip active" type="button" data-filter="All"><i class="fas fa-layer-group"></i> All</button>
+                <button class="filter-chip" type="button" data-filter="Web Application"><i class="fas fa-globe"></i> Web</button>
+                <button class="filter-chip" type="button" data-filter="Mobile Application"><i class="fas fa-mobile-alt"></i> Mobile</button>
+            </div>
+
+            <!-- Project Gallery Grid -->
+            <div class="projects-grid" id="projects-grid">
 
                 <!-- Project 1: Anime World Website -->
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/pranitd14/anime-world-project" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="http://pranitd14.github.io/Anime-World-Website/" target="_blank" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-placeholder">
-                            <i class="fas fa-play-circle"></i>
-                        </div>
+                <article class="project-card" tabindex="0" role="button" aria-label="Anime World Website"
+                    data-project-id="anime-world" data-category="Web Application"
+                    data-github="https://github.com/pranitd14/anime-world-project"
+                    data-live="http://pranitd14.github.io/Anime-World-Website/">
+                    <div class="project-banner banner-anime">
+                        <div class="banner-glow"></div>
+                        <span class="project-num">01</span>
+                        <div class="banner-icon"><i class="fas fa-play-circle"></i></div>
+                        <span class="project-status"><span class="status-dot"></span>Live</span>
                     </div>
                     <div class="project-content">
-                        <div class="project-category">Web Application</div>
+                        <div class="project-meta">
+                            <span class="project-category"><i class="fas fa-globe"></i> Web Application</span>
+                        </div>
                         <h3 class="project-title">Anime World Website</h3>
-                        <p class="project-description">
-                            Streaming site for anime lovers using PHP, MySQL, Mega Cloud.
-                        </p>
-                        <div class="project-tech">
+                        <p class="project-description">Streaming site for anime lovers. Watch, download and explore anime with PHP backend and Mega Cloud storage.</p>
+                        <div class="project-tech" aria-label="Technologies">
                             <span class="tech-tag">PHP</span>
                             <span class="tech-tag">MySQL</span>
                             <span class="tech-tag">Mega Cloud</span>
                         </div>
+                        <div class="project-actions">
+                            <button class="details-btn" type="button" data-open-modal><i class="fas fa-expand-alt"></i> Details</button>
+                            <a href="http://pranitd14.github.io/Anime-World-Website/" target="_blank" class="live-btn"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Project 2: Taaza Khabar News Showing Website -->
+                </article>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/pranitd14/Taaza-Khabar-News-Showing-Website" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://pranitd14.github.io/Taaza-Khabar-News-Showing-Website/" target="_blank" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-placeholder">
-                            <i class="fas fa-newspaper"></i>
-                        </div>
+                <!-- Project 2: Taaza Khabar News Website -->
+                <article class="project-card" tabindex="0" role="button" aria-label="Taaza Khabar News Website"
+                    data-project-id="taaza-news" data-category="Web Application"
+                    data-github="https://github.com/pranitd14/Taaza-Khabar-News-Showing-Website"
+                    data-live="https://pranitd14.github.io/Taaza-Khabar-News-Showing-Website/">
+                    <div class="project-banner banner-news">
+                        <div class="banner-glow"></div>
+                        <span class="project-num">02</span>
+                        <div class="banner-icon"><i class="fas fa-newspaper"></i></div>
+                        <span class="project-status"><span class="status-dot"></span>Live</span>
                     </div>
                     <div class="project-content">
-                        <div class="project-category">Web Application</div>
-                        <h3 class="project-title">Taaza Khabar News Website</h3>
-                        <p class="project-description">
-                            News showing website for latest updates and current affairs.
-                        </p>
-                        <div class="project-tech">
+                        <div class="project-meta">
+                            <span class="project-category"><i class="fas fa-globe"></i> Web Application</span>
+                        </div>
+                        <h3 class="project-title">Taaza Khabar News</h3>
+                        <p class="project-description">Real-time news website covering latest updates and current affairs with a clean, minimal interface.</p>
+                        <div class="project-tech" aria-label="Technologies">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JavaScript</span>
                         </div>
+                        <div class="project-actions">
+                            <button class="details-btn" type="button" data-open-modal><i class="fas fa-expand-alt"></i> Details</button>
+                            <a href="https://pranitd14.github.io/Taaza-Khabar-News-Showing-Website/" target="_blank" class="live-btn"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Project 3: Taaza Khabar Android App -->
+                </article>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/pranitd14/Taaza-Khabar-Android-App" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://pranitd14.github.io/Taaza-Khabar-Android-App/" target="_blank" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-placeholder">
-                            <i class="fab fa-android"></i>
-                        </div>
+                <!-- Project 3: Taaza Khabar Android App -->
+                <article class="project-card" tabindex="0" role="button" aria-label="Taaza Khabar Android App"
+                    data-project-id="taaza-android" data-category="Mobile Application"
+                    data-github="https://github.com/pranitd14/Taaza-Khabar-Android-App"
+                    data-live="https://pranitd14.github.io/Taaza-Khabar-Android-App/">
+                    <div class="project-banner banner-android">
+                        <div class="banner-glow"></div>
+                        <span class="project-num">03</span>
+                        <div class="banner-icon"><i class="fab fa-android"></i></div>
+                        <span class="project-status"><span class="status-dot"></span>Live</span>
                     </div>
                     <div class="project-content">
-                        <div class="project-category">Mobile Application</div>
-                        <h3 class="project-title">Taaza Khabar News App</h3>
-                        <p class="project-description">
-                            Android application for news updates and current affairs on mobile.
-                        </p>
-                        <div class="project-tech">
+                        <div class="project-meta">
+                            <span class="project-category"><i class="fas fa-mobile-alt"></i> Mobile Application</span>
+                        </div>
+                        <h3 class="project-title">Taaza Khabar App</h3>
+                        <p class="project-description">Native Android news app delivering real-time current affairs and breaking news on your phone.</p>
+                        <div class="project-tech" aria-label="Technologies">
                             <span class="tech-tag">Android</span>
                             <span class="tech-tag">Java</span>
                             <span class="tech-tag">XML</span>
                         </div>
+                        <div class="project-actions">
+                            <button class="details-btn" type="button" data-open-modal><i class="fas fa-expand-alt"></i> Details</button>
+                            <a href="https://pranitd14.github.io/Taaza-Khabar-Android-App/" target="_blank" class="live-btn"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+                        </div>
                     </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="project-modal-overlay" id="project-modal" aria-hidden="true">
+            <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+                <button class="modal-close" type="button" aria-label="Close modal" data-close-modal>
+                    <i class="fas fa-xmark"></i>
+                </button>
+                <div class="modal-accent-bar" id="modal-accent-bar"></div>
+                <div class="modal-header">
+                    <div class="modal-badge" id="project-modal-category">Project</div>
+                    <h3 class="modal-title" id="project-modal-title">Project Title</h3>
                 </div>
+                <p class="modal-description" id="project-modal-description">Project description.</p>
+                <div class="modal-tech" id="project-modal-tech" aria-label="Technologies"></div>
+                <div class="modal-links">
+                    <a id="project-modal-github" class="modal-link" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                    <a id="project-modal-live" class="modal-link modal-link-primary" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-up-right-from-square"></i> Live Site</a>
+                </div>
+                <div class="modal-hint"><i class="fas fa-keyboard"></i> Press ESC to close</div>
             </div>
         </div>
     </section>
@@ -487,4 +510,6 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
+
