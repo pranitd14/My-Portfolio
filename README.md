@@ -22,16 +22,6 @@ I build **responsive**, **user-friendly** websites and web applications using cl
 
 ---
 
-##  Featured Projects
-
-### [Anime World](https://github.com/pranitd14/anime-world) &nbsp;•&nbsp; [Live Site](https://pranitd14.github.io/anime-world)  
-A streamlined anime streaming and download site built using PHP, MySQL, and Mega Cloud integration.
-
-### [Taaza Khabar (News Project)](https://github.com/pranitd14/Taaza-Khabar-News-Showing-Project-.git)
-A streamlined anime streaming and download site built using PHP, MySQL, and Mega Cloud integration.
-
----
-
 ##  Contact Me
 
 - **Email:** pranitdeshmukh2153@gmail.com  
