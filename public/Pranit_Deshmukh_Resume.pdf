@@ -1,0 +1,93 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Length 1584 >>
+stream
+BT
+/F1 20 Tf
+50 780 Td
+(PRANIT PRAKASH DESHMUKH) Tj
+0 -24 Td
+/F2 11 Tf
+(IT Student & Aspiring Software Developer | Brand: Pranit Builds) Tj
+0 -18 Td
+/F2 10 Tf
+(Email: pranitdeshmukh2153@gmail.com | Location: Pen, Maharashtra, India) Tj
+0 -15 Td
+(GitHub: github.com/PranitDeshmukh | LinkedIn: linkedin.com/in/pranitdeshmukh) Tj
+0 -28 Td
+/F1 13 Tf
+(EDUCATION) Tj
+0 -18 Td
+/F1 10 Tf
+(Pillai HOC College of Engineering and Technology - B.E. in Information Technology) Tj
+0 -15 Td
+/F2 10 Tf
+(Graduation: 2026 | Mumbai University | Overall CGPA: 8.79 / 10.0) Tj
+0 -14 Td
+(Sem 1: 8.33 | Sem 2: 8.50 | Sem 3: 8.92 | Sem 4: 9.38) Tj
+0 -26 Td
+/F1 13 Tf
+(TECHNICAL SKILLS) Tj
+0 -18 Td
+/F2 10 Tf
+(Languages: JavaScript, TypeScript, Python, Java, HTML5, CSS3, SQL) Tj
+0 -15 Td
+(Frameworks & Libs: React, Node.js, Express, Tailwind CSS, REST APIs) Tj
+0 -15 Td
+(Databases & Tools: PostgreSQL, MongoDB, Git, GitHub, Linux, VS Code) Tj
+0 -26 Td
+/F1 13 Tf
+(KEY PROJECTS) Tj
+0 -18 Td
+/F1 10 Tf
+(1. Smart Expense Tracker & Financial Dashboard) Tj
+0 -15 Td
+/F2 9.5 Tf
+(- Developed full-stack expense tracking system with analytics and category budgets.) Tj
+0 -18 Td
+/F1 10 Tf
+(2. Student Performance & Academic Analytics Hub) Tj
+0 -15 Td
+/F2 9.5 Tf
+(- Interactive portal visualizing student metrics, CGPA trends, and grading distributions.) Tj
+0 -18 Td
+/F1 10 Tf
+(3. Geometric Balance Developer Portfolio) Tj
+0 -15 Td
+/F2 9.5 Tf
+(- High-performance, responsive portfolio with dark theme and smooth interactions.) Tj
+0 -32 Td
+/F2 8.5 Tf
+([Placeholder Resume / CV - Pranit Prakash Deshmukh Portfolio]) Tj
+ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000257 00000 n 
+0000000332 00000 n 
+0000000402 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2038
+%%EOF

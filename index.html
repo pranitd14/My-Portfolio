@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pranit Prakash Deshmukh - Portfolio | IT Student & Aspiring Software Developer</title>
+  <meta name="description" content="Personal portfolio of Pranit Prakash Deshmukh (Pranit Builds). IT student & aspiring software developer from Pen, Maharashtra, India. Projects, skills, education, and contact.">
+  <meta property="og:title" content="Pranit Prakash Deshmukh - Portfolio | Pranit Builds">
+  <meta property="og:description" content="IT Student & Aspiring Software Developer passionate about building practical software and exploring modern technologies.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Inter, Space Grotesk, Geist, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Main JavaScript -->
+  <script src="./script.js" defer></script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <!-- Brand / Logo -->
+      <a href="#home" class="brand-logo" id="brand-logo" aria-label="Pranit Builds Home">
+        <span class="brand-terminal-symbol">&gt;_</span>
+        <div class="brand-text-wrap">
+          <span class="brand-name">Pranit</span>
+          <span class="brand-tag">pranit.builds</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="./assets/Pranit_Deshmukh_Resume.pdf" class="nav-resume-btn" download="Pranit_Deshmukh_Resume.pdf" target="_blank" rel="noopener noreferrer" id="header-download-cv-btn" title="Download Resume / CV (PDF)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" x2="12" y1="15" y2="3"></line>
+          </svg>
+          <span>Download CV</span>
+        </a>
+        <a href="#contact" class="nav-cta-btn">Contact Me</a>
+      </nav>
+
+      <!-- Mobile Navigation Hamburger Button -->
+      <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12"></line>
+          <line x1="4" x2="20" y1="6" y2="6"></line>
+          <line x1="4" x2="20" y1="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-nav-menu" id="mobile-menu" aria-label="Mobile Navigation">
+      <a href="#home" class="mobile-nav-link active">
+        <span>01 // Home</span>
+        <span>→</span>
+      </a>
+      <a href="#about" class="mobile-nav-link">
+        <span>02 // About</span>
+        <span>→</span>
+      </a>
+      <a href="#skills" class="mobile-nav-link">
+        <span>03 // Skills</span>
+        <span>→</span>
+      </a>
+      <a href="#projects" class="mobile-nav-link">
+        <span>04 // Projects</span>
+        <span>→</span>
+      </a>
+      <a href="#education" class="mobile-nav-link">
+        <span>05 // Education</span>
+        <span>→</span>
+      </a>
+      <a href="./assets/Pranit_Deshmukh_Resume.pdf" class="mobile-nav-link" download="Pranit_Deshmukh_Resume.pdf" target="_blank" rel="noopener noreferrer" id="mobile-download-cv-btn">
+        <span>06 // Download CV (PDF)</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" x2="12" y1="15" y2="3"></line>
+        </svg>
+      </a>
+      <a href="#contact" class="mobile-nav-link">
+        <span>07 // Contact</span>
+        <span>→</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTENT
+       ======================================================================== -->
+  <main id="main-content">
+
+    <!-- HERO SECTION (#home) -->
+    <section class="section hero-section" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column: Copy & Actions -->
+          <div class="hero-content reveal-on-scroll">
+            <div class="hero-status-pill">
+              <span class="status-dot-pulse"></span>
+              <span>Available for Opportunities & Projects</span>
+            </div>
+
+            <h1 class="hero-greeting">Hi, I’m Pranit.</h1>
+            <h2 class="hero-title">IT Student &amp; Aspiring Software Developer</h2>
+            <p class="hero-description">
+              I build practical software, explore modern technologies, and turn ideas into useful digital products.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary" id="hero-view-projects-btn">
+                <span>View My Projects</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" x2="19" y1="12" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="./assets/Pranit_Deshmukh_Resume.pdf" class="btn btn-secondary" id="hero-download-cv-btn" download="Pranit_Deshmukh_Resume.pdf" target="_blank" rel="noopener noreferrer" title="Download Resume / CV (PDF)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" x2="12" y1="15" y2="3"></line>
+                </svg>
+                <span>Download CV</span>
+              </a>
+              <a href="#contact" class="btn btn-outline" id="hero-contact-btn">
+                <span>Contact Me</span>
+              </a>
+            </div>
+
+            <div class="hero-meta-strip">
+              <div class="hero-meta-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Pen, Maharashtra, India</span>
+              </div>
+              <div class="hero-meta-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <span>Brand: Pranit Builds</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Terminal Interactive Card Mockup -->
+          <div class="hero-visual-card reveal-on-scroll" id="hero-terminal">
+            <div class="terminal-header">
+              <div class="terminal-pips">
+                <span class="pip red"></span>
+                <span class="pip yellow"></span>
+                <span class="pip green"></span>
+              </div>
+              <span class="terminal-title">pranit@workstation:~</span>
+              <span class="terminal-title">zsh</span>
+            </div>
+
+            <div class="terminal-body">
+              <div class="terminal-line">
+                <span class="terminal-prompt">$</span>
+                <span class="terminal-cmd">whoami</span>
+              </div>
+              <div class="terminal-response">
+                <div><span class="term-prop">Name:</span> <span class="term-val">Pranit Prakash Deshmukh</span></div>
+                <div><span class="term-prop">Role:</span> <span class="term-val">IT Student &amp; Aspiring Developer</span></div>
+                <div><span class="term-prop">Location:</span> <span class="term-val">Pen, Maharashtra, India</span></div>
+                <div><span class="term-prop">Status:</span> <span class="term-val">MCA (2026–Present) • Pillai College</span></div>
+              </div>
+
+              <div class="terminal-line">
+                <span class="terminal-prompt">$</span>
+                <span class="terminal-cmd">cat interests.json</span>
+              </div>
+              <div class="terminal-response">
+                <div class="term-comment">// Core Technical Focus</div>
+                <div>[ "Software Dev", "Web Dev", "Databases", "AI APIs", "Linux Tools" ]</div>
+              </div>
+
+              <div class="terminal-line">
+                <span class="terminal-prompt">$</span>
+                <span class="terminal-cmd">git status</span>
+              </div>
+              <div class="terminal-response">
+                <div><span class="term-val" style="color: var(--color-success);">● On branch main</span> - Working tree clean</div>
+                <div class="term-comment">Ready to build and deploy useful digital products.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION (#about) -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">// Background &amp; Profile</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">
+            Get to know my journey, development mindset, and technical interests.
+          </p>
+        </header>
+
+        <div class="about-grid">
+          <!-- Left: Narrative Text -->
+          <article class="about-card reveal-on-scroll">
+            <p class="about-lead-paragraph">
+              I’m an IT student and aspiring software developer passionate about technology and building practical software. I enjoy learning by creating projects, experimenting with different technologies, and exploring modern development tools and environments.
+            </p>
+            <p class="about-body-paragraph">
+              I’m particularly interested in software and web development, databases, AI-powered applications, and Linux. I enjoy solving technical problems, experimenting with new tools, and turning ideas into working products while continuously improving my development skills.
+            </p>
+
+            <div class="hero-visual-card reveal-on-scroll revealed" id="hero-terminal">
+            <div class="terminal-header">
+              <div class="terminal-pips">
+                <span class="pip red"></span>
+                <span class="pip yellow"></span>
+                <span class="pip green"></span>
+              </div>
+              <span class="terminal-title">pranit@workstation:~</span>
+              <span class="terminal-title">zsh</span>
+            </div>
+
+            <div class="terminal-body">
+              <div class="terminal-line">
+                <span class="terminal-prompt">$</span>
+                <span class="terminal-cmd">cat explore.json</span>
+              </div>
+              <div class="terminal-response">
+                <div class="term-comment">// Currently Exploring</div>
+                <div>
+                  [<br>
+                  &nbsp;&nbsp;"Web Development",<br>
+                  &nbsp;&nbsp;"AI APIs & Integrations",<br>
+                  &nbsp;&nbsp;"Backend & Databases",<br>
+                  &nbsp;&nbsp;"Linux & Developer Tools"<br>
+                  ]
+                </div>
+              </div>
+            </div>
+          </div>
+          </article>
+
+          <!-- Right: Structured Information & Key Interests -->
+          <article class="about-details-card reveal-on-scroll">
+            <div>
+              <div class="about-detail-group">
+                <div class="about-detail-label">Full Name</div>
+                <div class="about-detail-value">Pranit Prakash Deshmukh</div>
+              </div>
+
+              <div class="about-detail-group">
+                <div class="about-detail-label">Professional Identity</div>
+                <div class="about-detail-value">IT Student / Aspiring Software Developer</div>
+              </div>
+
+              <div class="about-detail-group">
+                <div class="about-detail-label">Personal Brand</div>
+                <div class="about-detail-value">Pranit Builds</div>
+              </div>
+
+              <div class="about-detail-group">
+                <div class="about-detail-label">Location</div>
+                <div class="about-detail-value">Pen, Maharashtra, India</div>
+              </div>
+            </div>
+
+            <div class="about-detail-group" style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+              <div class="about-detail-label">Areas of Interest</div>
+              <div class="about-interests-wrap">
+                <span class="interest-tag">Software Development</span>
+                <span class="interest-tag">Web Development</span>
+                <span class="interest-tag">Databases</span>
+                <span class="interest-tag">AI & API Integration</span>
+                <span class="interest-tag">Linux</span>
+                <span class="interest-tag">Developer Tools</span>
+                <span class="interest-tag">Modern Workflows</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION (#skills) -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">// Technical Arsenal</span>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+          <p class="section-subtitle">
+            Tools, languages, and platforms I work with. Clean badges representing verified hands-on competencies.
+          </p>
+        </header>
+
+        <div class="skills-grid">
+          <!-- 1. Programming -->
+          <article class="skill-category-card reveal-on-scroll">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="skill-category-title">Programming</h3>
+            </div>
+            <div class="skill-badges-wrap">
+              <span class="skill-badge">Java</span>
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">JavaScript</span>
+              <span class="skill-badge">SQL</span>
+            </div>
+          </article>
+
+          <!-- 2. Web Development -->
+          <article class="skill-category-card reveal-on-scroll">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" x2="22" y1="12" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <h3 class="skill-category-title">Web</h3>
+            </div>
+            <div class="skill-badges-wrap">
+              <span class="skill-badge">HTML</span>
+              <span class="skill-badge">CSS</span>
+              <span class="skill-badge">JavaScript</span>
+              <span class="skill-badge">React</span>
+            </div>
+          </article>
+
+          <!-- 3. Database -->
+          <article class="skill-category-card reveal-on-scroll">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                </svg>
+              </div>
+              <h3 class="skill-category-title">Database</h3>
+            </div>
+            <div class="skill-badges-wrap">
+              <span class="skill-badge">MySQL</span>
+              <span class="skill-badge">MySQL Workbench</span>
+            </div>
+          </article>
+
+          <!-- 4. Development Tools -->
+          <article class="skill-category-card reveal-on-scroll">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <h3 class="skill-category-title">Development Tools</h3>
+            </div>
+            <div class="skill-badges-wrap">
+              <span class="skill-badge">Git</span>
+              <span class="skill-badge">GitHub</span>
+              <span class="skill-badge">Visual Studio Code</span>
+              <span class="skill-badge">Docker</span>
+              <span class="skill-badge">Eclipse</span>
+            </div>
+          </article>
+
+          <!-- 5. Operating Systems -->
+          <article class="skill-category-card reveal-on-scroll">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+                  <line x1="8" x2="16" y1="21" y2="21"></line>
+                  <line x1="12" x2="12" y1="17" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="skill-category-title">Operating Systems & CLI</h3>
+            </div>
+            <div class="skill-badges-wrap">
+              <span class="skill-badge">Windows</span>
+              <span class="skill-badge">Linux</span>
+              <span class="skill-badge">Ubuntu</span>
+              <span class="skill-badge">Linux CLI</span>
+            </div>
+          </article>
+
+          <!-- 6. AI / Modern Development -->
+          <article class="skill-category-card reveal-on-scroll">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" x2="20" y1="19" y2="19"></line>
+                </svg>
+              </div>
+              <h3 class="skill-category-title">AI & Modern Development</h3>
+            </div>
+            <div class="skill-badges-wrap">
+              <span class="skill-badge">Generative AI</span>
+              <span class="skill-badge">AI API Integration</span>
+              <span class="skill-badge">AI-Assisted Development</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION (#projects) -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">// Showcase</span>
+          <h2 class="section-title">Completed Projects</h2>
+          <p class="section-subtitle">
+            Real software projects I have built. Focuses on practical problem-solving, structured workflows, and clean user experiences.
+          </p>
+        </header>
+
+        <!-- Project Filter Controls -->
+        <div class="projects-filter-bar reveal-on-scroll" role="tablist" aria-label="Project category filters">
+          <button class="filter-btn active" data-filter="all" id="filter-all">All Projects</button>
+          <button class="filter-btn" data-filter="web" id="filter-web">Web Applications</button>
+          <button class="filter-btn" data-filter="app" id="filter-app">Mobile Apps</button>
+          <button class="filter-btn" data-filter="management" id="filter-management">Management Systems</button>
+        </div>
+
+        <div class="projects-grid" id="projects-container">
+
+          <!-- PROJECT 1: Anime World -->
+          <article class="project-card reveal-on-scroll" data-category="web" id="project-anime-world">
+            <div class="project-preview-wrapper">
+              <img src="./assets/images/anime-world.svg" alt="Anime World streaming website interface preview" loading="lazy">
+            </div>
+            <div class="project-content">
+              <div class="project-header-meta">
+                <span class="project-type-pill">Anime Streaming Website</span>
+                <span class="project-type-pill" style="color: var(--color-primary);">Web</span>
+              </div>
+              <h3 class="project-name">Anime World</h3>
+              <p class="project-description">
+                Anime World is an anime streaming website designed to provide users with a simple and engaging platform for discovering and watching anime content.
+              </p>
+
+              <div class="project-highlights-title">Key Highlights</div>
+              <div class="project-highlights-list">
+                <span class="project-highlight-item">Anime-focused streaming interface</span>
+                <span class="project-highlight-item">Anime browsing</span>
+                <span class="project-highlight-item">Content discovery</span>
+                <span class="project-highlight-item">Organized anime presentation</span>
+                <span class="project-highlight-item">User-friendly navigation</span>
+                <span class="project-highlight-item">Responsive web interface</span>
+              </div>
+
+              <div class="project-actions">
+                <!-- Add GitHub project URL here -->
+                <a href="https://github.com/pranitd14/Anime-World-Website" class="project-link-btn" aria-label="Anime World GitHub Repository">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>
+                  <span>Source Code</span>
+                </a>
+                <!-- Add Live Demo URL here -->
+                <a href="https://pranitd14.github.io/Anime-World-Website/" class="project-link-btn" aria-label="Anime World Live Demo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  </svg>
+                  <span>Live Preview</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Taaza Khabar (Website) -->
+          <article class="project-card reveal-on-scroll" data-category="web" id="project-taaza-khabar-web">
+            <div class="project-preview-wrapper">
+              <img src="./assets/images/taaza-khabar-web.svg" alt="Taaza Khabar news showing website interface preview" loading="lazy">
+            </div>
+            <div class="project-content">
+              <div class="project-header-meta">
+                <span class="project-type-pill">News Showing Website</span>
+                <span class="project-type-pill" style="color: var(--color-primary);">Web</span>
+              </div>
+              <h3 class="project-name">Taaza Khabar</h3>
+              <p class="project-description">
+                Taaza Khabar is a news-focused website designed to display news in an organized and easy-to-read interface.
+              </p>
+
+              <div class="project-highlights-title">Key Highlights</div>
+              <div class="project-highlights-list">
+                <span class="project-highlight-item">News listing</span>
+                <span class="project-highlight-item">News content display</span>
+                <span class="project-highlight-item">Organized presentation</span>
+                <span class="project-highlight-item">Simple navigation</span>
+                <span class="project-highlight-item">Responsive design</span>
+                <span class="project-highlight-item">Easy news browsing</span>
+              </div>
+
+              <div class="project-actions">
+                <!-- Add GitHub project URL here -->
+                <a href="https://github.com/pranitd14/Taaza-Khabar-News-Showing-Website" class="project-link-btn" aria-label="Taaza Khabar Web GitHub Repository">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>
+                  <span>Source Code</span>
+                </a>
+                <!-- Add Live Demo URL here -->
+                <a href="https://pranitd14.github.io/Taaza-Khabar-News-Showing-Website/" class="project-link-btn" aria-label="Taaza Khabar Web Live Demo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  </svg>
+                  <span>Live Preview</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Taaza Khabar (App) -->
+          <article class="project-card reveal-on-scroll" data-category="app" id="project-taaza-khabar-app">
+            <div class="project-preview-wrapper">
+              <img src="./assets/images/taaza-khabar-app.svg" alt="Taaza Khabar news application mobile interface preview" loading="lazy">
+            </div>
+            <div class="project-content">
+              <div class="project-header-meta">
+                <span class="project-type-pill">News Showing App</span>
+                <span class="project-type-pill" style="color: var(--color-secondary);">Android App</span>
+              </div>
+              <h3 class="project-name">Taaza Khabar</h3>
+              <p class="project-description">
+                Taaza Khabar is a news application created to provide users with a convenient way to browse and read news through an application interface.
+              </p>
+
+              <div class="project-highlights-title">Key Highlights</div>
+              <div class="project-highlights-list">
+                <span class="project-highlight-item">News browsing</span>
+                <span class="project-highlight-item">News content display</span>
+                <span class="project-highlight-item">Simple application interface</span>
+                <span class="project-highlight-item">Organized news presentation</span>
+                <span class="project-highlight-item">Easy navigation</span>
+                <span class="project-highlight-item">User-focused reading experience</span>
+              </div>
+
+              <div class="project-actions">
+                <!-- Add GitHub project URL here -->
+                <a href="https://github.com/pranitd14/Taaza-Khabar-Android-Project" class="project-link-btn" aria-label="Taaza Khabar App GitHub Repository">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>
+                  <span>Source Code</span>
+                </a>
+                <!-- Add Live Demo URL here -->
+                <a href="https://pranitd14.github.io/Taaza-Khabar-Android-App/" class="project-link-btn" aria-label="Taaza Khabar App Demo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  </svg>
+                  <span>App Preview</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: Order Mate -->
+          <article class="project-card reveal-on-scroll" data-category="management" id="project-order-mate">
+            <div class="project-preview-wrapper">
+              <img src="./assets/images/order-mate.svg" alt="Order Mate ordering management application interface preview" loading="lazy">
+            </div>
+            <div class="project-content">
+              <div class="project-header-meta">
+                <span class="project-type-pill">Ordering Management Application</span>
+                <span class="project-type-pill" style="color: var(--color-secondary);">Android App</span>
+              </div>
+              <h3 class="project-name">Order Mate</h3>
+              <p class="project-description">
+                Order Mate is an ordering management application designed to simplify order handling and provide users with a convenient and organized ordering experience.
+              </p>
+
+              <div class="project-highlights-title">Key Highlights</div>
+              <div class="project-highlights-list">
+                <span class="project-highlight-item">Order management</span>
+                <span class="project-highlight-item">Product/order information handling</span>
+                <span class="project-highlight-item">Organized order workflow</span>
+                <span class="project-highlight-item">User-friendly interface</span>
+                <span class="project-highlight-item">Smooth navigation</span>
+                <span class="project-highlight-item">Practical application-focused design</span>
+              </div>
+
+              <div class="project-actions">
+                <!-- Add GitHub project URL here -->
+                <a href="https://github.com/pranitd14/Order-Mate-Android-Project" class="project-link-btn" aria-label="Order Mate GitHub Repository">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>
+                  <span>Source Code</span>
+                </a>
+                <!-- Add Live Demo URL here -->
+                <a href="#" class="project-link-btn" aria-label="Order Mate Live Demo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  </svg>
+                  <span>Dashboard Preview</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION (#education) -->
+    <section class="section" id="education">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">// Academic Journey</span>
+          <h2 class="section-title">Education &amp; Credentials</h2>
+          <p class="section-subtitle">
+            Academic background, qualifications, and achievements.
+          </p>
+        </header>
+
+        <div class="education-wrapper">
+          <!-- Main Degree Card -->
+          <article class="degree-card reveal-on-scroll" id="degree-card">
+            <div class="degree-header">
+              <div class="degree-title-wrap">
+                <h3 class="degree-title">Master of Computer Applications</h3>
+                <div class="degree-institution">Pillai College of Arts, Commerce & Science, Rasayani</div>
+                <div class="degree-university">Autonomous Institution</div>
+              </div>
+              <div class="degree-period-badge">
+                <span>2026 – Present</span>
+              </div>
+            </div>
+          </article>
+
+        <div class="education-wrapper">
+          <!-- First Degree Card -->
+          <article class="degree-card reveal-on-scroll" id="degree-card">
+            <div class="degree-header">
+              <div class="degree-title-wrap">
+                <h3 class="degree-title">Bachelor of Business Administration – Computer Applications (BBA-CA)</h3>
+                <div class="degree-institution">Dr. D. Y. Patil Arts, Commerce &amp; Science College, Pimpri</div>
+                <div class="degree-university">Savitribai Phule Pune University (SPPU)</div>
+              </div>
+              <div class="degree-period-badge">
+                <span>2023 – 2026</span>
+              </div>
+            </div>
+
+            <div class="project-highlights-title" style="margin-top: 1rem;">Academic Performance</div>
+            
+            <!-- CGPA Breakdown -->
+            <div class="performance-grid">
+              <div class="performance-item">
+                <div class="perf-label">Semester 1</div>
+                <div class="perf-value">8.24</div>
+              </div>
+              <div class="performance-item">
+                <div class="perf-label">Semester 2</div>
+                <div class="perf-value">8.48</div>
+              </div>
+              <div class="performance-item">
+                <div class="perf-label">Semester 3</div>
+                <div class="perf-value">7.26</div>
+              </div>
+              <div class="performance-item">
+                <div class="perf-label">Semester 4</div>
+                <div class="perf-value">8.00</div>
+              </div>
+              <div class="performance-item overall">
+                <div class="perf-label">Overall CGPA</div>
+                <div class="perf-value">8.04</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Schooling Records (HSC & SSC) -->
+          <div class="schooling-grid">
+            <article class="school-card reveal-on-scroll">
+              <div>
+                <h4 class="school-info-title">Higher Secondary Certificate (HSC)</h4>
+                <div class="school-info-sub">Secondary &amp; Higher Secondary Board</div>
+              </div>
+              <div class="school-score-badge">61.50%</div>
+            </article>
+
+            <article class="school-card reveal-on-scroll">
+              <div>
+                <h4 class="school-info-title">Secondary School Certificate (SSC)</h4>
+                <div class="school-info-sub">Secondary &amp; Higher Secondary Board</div>
+              </div>
+              <div class="school-score-badge">79.80%</div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION (#contact) -->
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">// Get In Touch</span>
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">
+            Have a project, opportunity, or question? Connect directly via email or social links.
+          </p>
+        </header>
+
+        <div class="contact-container">
+          <!-- Contact Channels & Location -->
+          <div class="contact-info-card reveal-on-scroll" id="contact-info-card">
+            <div>
+              <h3 class="contact-info-title">Let’s Connect</h3>
+              <p class="contact-info-desc">
+                Feel free to reach out for software development opportunities, project collaborations, or technical discussions.
+              </p>
+
+              <div class="contact-links-list">
+                <!-- Email -->
+                <div class="contact-channel-item contact-channel-with-action" id="email-channel-card">
+                  <a href="mailto:pranitdeshmukh2153@gmail.com" class="channel-main-link" aria-label="Send email to Pranit">
+                    <div class="channel-icon-box">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                      </svg>
+                    </div>
+                    <div class="channel-content">
+                      <span class="channel-name">Email</span>
+                      <span class="channel-value" id="contact-email-val">pranitdeshmukh2153@gmail.com</span>
+                    </div>
+                  </a>
+                  <button type="button" class="copy-channel-btn" id="copy-email-btn" aria-label="Copy email address to clipboard" title="Copy email address to clipboard">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+
+                <!-- GitHub -->
+                <!-- Add GitHub profile URL here -->
+                <a href="https://github.com//pranitd14" class="contact-channel-item" aria-label="Visit Pranit's GitHub Profile">
+                  <div class="channel-icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                    </svg>
+                  </div>
+                  <div class="channel-content">
+                    <span class="channel-name">GitHub</span>
+                    <span class="channel-value">github.com // pranit</span>
+                  </div>
+                </a>
+
+                <!-- LinkedIn -->
+                <!-- Add LinkedIn profile URL here -->
+                <a href="https://linkedin.com/in/pranitd14" class="contact-channel-item" aria-label="Visit Pranit's LinkedIn Profile">
+                  <div class="channel-icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect width="4" height="12" x="2" y="9"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                  </div>
+                  <div class="channel-content">
+                    <span class="channel-name">LinkedIn</span>
+                    <span class="channel-value">linkedin.com/in // pranit</span>
+                  </div>
+                </a>
+
+                <!-- Instagram -->
+                <!-- Add Instagram profile URL here -->
+                <a href="https://instagram.com/pranitd14" class="contact-channel-item" aria-label="Visit Pranit's Instagram Profile">
+                  <div class="channel-icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                    </svg>
+                  </div>
+                  <div class="channel-content">
+                    <span class="channel-name">Instagram</span>
+                    <span class="channel-value">instagram.com // pranit</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-location-bar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Pen, Maharashtra, India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="footer-brand-title">Pranit Prakash Deshmukh &bull; Pranit Builds</div>
+        <div class="footer-brand-desc">IT Student &amp; Aspiring Software Developer &bull; Pen, Maharashtra, India</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home" class="footer-link">Home</a>
+        <a href="#about" class="footer-link">About</a>
+        <a href="#skills" class="footer-link">Skills</a>
+        <a href="#projects" class="footer-link">Projects</a>
+        <a href="#education" class="footer-link">Education</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top of page">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6"></path>
+    </svg>
+  </button>
+
+  <!-- Custom Geometric Interactive Cursor Elements -->
+  <div class="custom-cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+</body>
+</html>

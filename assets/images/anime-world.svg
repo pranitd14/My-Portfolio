@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d14" />
+      <stop offset="100%" stop-color="#141a29" />
+    </linearGradient>
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#192233" />
+      <stop offset="100%" stop-color="#0f1420" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-grad)" rx="8" />
+  <rect width="800" height="450" fill="none" stroke="#1e293b" stroke-width="1.5" rx="8" />
+
+  <!-- Top Window Bar -->
+  <rect width="800" height="42" fill="#0c101a" rx="8 8 0 0" />
+  <line x1="0" y1="42" x2="800" y2="42" stroke="#1e293b" stroke-width="1" />
+  <circle cx="24" cy="21" r="5" fill="#ff5f56" />
+  <circle cx="42" cy="21" r="5" fill="#ffbd2e" />
+  <circle cx="60" cy="21" r="5" fill="#27c93f" />
+  <text x="400" y="26" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">animeworld.local // streaming-ui</text>
+
+  <!-- Navigation Mockup -->
+  <rect x="30" y="60" width="140" height="28" rx="4" fill="#161f30" stroke="#00f2fe" stroke-width="1" stroke-opacity="0.4" />
+  <text x="45" y="79" fill="#00f2fe" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="14">▶ ANIME WORLD</text>
+  <text x="210" y="78" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="12">Browse</text>
+  <text x="280" y="78" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="12">Trending</text>
+  <text x="360" y="78" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="12">Schedule</text>
+  <rect x="630" y="60" width="140" height="28" rx="4" fill="#161f30" stroke="#1e293b" stroke-width="1" />
+  <text x="645" y="78" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="11">Search anime...</text>
+
+  <!-- Featured Player / Hero Area -->
+  <rect x="30" y="105" width="480" height="230" rx="8" fill="#090d16" stroke="#1e293b" stroke-width="1" />
+  <path d="M 30 105 L 510 105" stroke="url(#cyan-glow)" stroke-width="2" />
+  <!-- Anime art abstract lines & player -->
+  <path d="M 60 270 Q 150 160 240 230 T 420 180" fill="none" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.3" />
+  <circle cx="270" cy="200" r="32" fill="#00f2fe" fill-opacity="0.15" stroke="#00f2fe" stroke-width="2" />
+  <polygon points="262,186 286,200 262,214" fill="#00f2fe" />
+  
+  <rect x="50" y="125" width="80" height="20" rx="10" fill="#00f2fe" fill-opacity="0.15" stroke="#00f2fe" stroke-width="1" />
+  <text x="90" y="139" fill="#00f2fe" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">NOW STREAMING</text>
+  <text x="50" y="275" fill="#f8fafc" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700">Demon Slayer: Swordsmith Village</text>
+  <text x="50" y="300" fill="#94a3b8" font-family="'Geist', sans-serif" font-size="12">Episode 11 • Ultra HD 1080p • Japanese Audio (English Sub)</text>
+
+  <!-- Right Side: Episodes / Up Next Playlist -->
+  <rect x="530" y="105" width="240" height="230" rx="8" fill="url(#card-grad)" stroke="#1e293b" stroke-width="1" />
+  <text x="550" y="132" fill="#f8fafc" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Up Next / Episodes</text>
+  
+  <rect x="545" y="148" width="210" height="48" rx="4" fill="#0c101a" stroke="#00f2fe" stroke-width="1" stroke-opacity="0.6" />
+  <text x="557" y="170" fill="#00f2fe" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">EP 11 - A Connected Bond</text>
+  <text x="557" y="186" fill="#94a3b8" font-family="'Geist', sans-serif" font-size="10">24 mins • Playing</text>
+
+  <rect x="545" y="204" width="210" height="48" rx="4" fill="#0c101a" stroke="#1e293b" stroke-width="1" />
+  <text x="557" y="226" fill="#e1e2ec" font-family="'JetBrains Mono', monospace" font-size="11">EP 12 - Dawn Falls</text>
+  <text x="557" y="242" fill="#94a3b8" font-family="'Geist', sans-serif" font-size="10">23 mins</text>
+
+  <rect x="545" y="260" width="210" height="48" rx="4" fill="#0c101a" stroke="#1e293b" stroke-width="1" />
+  <text x="557" y="282" fill="#e1e2ec" font-family="'JetBrains Mono', monospace" font-size="11">EP 13 - Special Finale</text>
+  <text x="557" y="298" fill="#94a3b8" font-family="'Geist', sans-serif" font-size="10">45 mins</text>
+
+  <!-- Bottom: Discovery Carousel -->
+  <text x="30" y="365" fill="#f8fafc" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600">Recommended Anime</text>
+  
+  <g transform="translate(30, 380)">
+    <rect width="170" height="50" rx="4" fill="#161f30" stroke="#1e293b" stroke-width="1" />
+    <rect x="8" y="8" width="34" height="34" rx="3" fill="#00f2fe" fill-opacity="0.2" />
+    <text x="52" y="26" fill="#e1e2ec" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600">Attack on Titan</text>
+    <text x="52" y="38" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">Action / Sci-Fi</text>
+  </g>
+
+  <g transform="translate(225, 380)">
+    <rect width="170" height="50" rx="4" fill="#161f30" stroke="#1e293b" stroke-width="1" />
+    <rect x="8" y="8" width="34" height="34" rx="3" fill="#38bdf8" fill-opacity="0.2" />
+    <text x="52" y="26" fill="#e1e2ec" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600">Jujutsu Kaisen</text>
+    <text x="52" y="38" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">Supernatural</text>
+  </g>
+
+  <g transform="translate(420, 380)">
+    <rect width="170" height="50" rx="4" fill="#161f30" stroke="#1e293b" stroke-width="1" />
+    <rect x="8" y="8" width="34" height="34" rx="3" fill="#00f2fe" fill-opacity="0.2" />
+    <text x="52" y="26" fill="#e1e2ec" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600">Solo Leveling</text>
+    <text x="52" y="38" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">Fantasy / Action</text>
+  </g>
+
+  <g transform="translate(615, 380)">
+    <rect width="155" height="50" rx="4" fill="#161f30" stroke="#1e293b" stroke-width="1" />
+    <rect x="8" y="8" width="34" height="34" rx="3" fill="#38bdf8" fill-opacity="0.2" />
+    <text x="50" y="26" fill="#e1e2ec" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600">Frieren</text>
+    <text x="50" y="38" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">Adventure / Drama</text>
+  </g>
+</svg>
