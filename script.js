@@ -348,9 +348,9 @@ function initPageLoadAnimation() {
 
   const lines = [
     { text: 'Initializing Pranit Builds...', delay: 0 },
-    { text: 'Loading portfolio...', delay: 320 },
-    { text: 'Loading skills...', delay: 620 },
-    { text: 'Loading projects...', delay: 900 },
+    { text: 'Loading portfolio...', delay: 520 },
+    { text: 'Loading skills...', delay: 820 },
+    { text: 'Loading projects...', delay: 1000 },
     { text: 'System ready ✓', delay: 1180, success: true },
   ];
 
