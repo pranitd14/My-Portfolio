@@ -338,25 +338,57 @@ function initScrollReveal() {
 }
 
 /**
- * 9. Page Load Animation
- * Smoothly fades the entire main content container in once the document is fully ready.
+ * 9. Loading Screen + Page Load Animation
  */
 function initPageLoadAnimation() {
+  const loader = document.getElementById('loading-screen');
+  const linesContainer = document.getElementById('loader-lines');
+  const progressBar = document.getElementById('loader-progress');
   const mainContent = document.getElementById('main-content');
-  if (!mainContent) return;
 
-  const triggerReveal = () => {
-    requestAnimationFrame(() => {
-      mainContent.classList.add('page-loaded');
-    });
-  };
+  const lines = [
+    { text: 'Initializing Pranit Builds...', delay: 0 },
+    { text: 'Loading portfolio...', delay: 320 },
+    { text: 'Loading skills...', delay: 620 },
+    { text: 'Loading projects...', delay: 900 },
+    { text: 'System ready ✓', delay: 1180, success: true },
+  ];
 
-  // If already loaded or interactive, reveal smoothly
-  if (document.readyState === 'complete' || document.readyState === 'interactive') {
-    triggerReveal();
-  } else {
-    window.addEventListener('load', triggerReveal);
+  const progressSteps = [10, 35, 60, 82, 100];
+
+  if (!loader || !linesContainer || !progressBar || !mainContent) {
+    if (mainContent) mainContent.classList.add('page-loaded');
+    return;
   }
+
+  // Respect reduced motion — skip loader entirely
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    loader.style.display = 'none';
+    mainContent.classList.add('page-loaded');
+    return;
+  }
+
+  lines.forEach((line, i) => {
+    const el = document.createElement('div');
+    el.className = 'loader-line' + (line.success ? ' success' : '');
+    el.innerHTML = `<span class="loader-prompt">&gt;</span><span>${line.text}</span>`;
+    linesContainer.appendChild(el);
+
+    setTimeout(() => {
+      el.classList.add('visible');
+      progressBar.style.width = progressSteps[i] + '%';
+    }, line.delay);
+  });
+
+  const totalDuration = lines[lines.length - 1].delay + 480;
+
+  setTimeout(() => {
+    loader.classList.add('fade-out');
+    setTimeout(() => {
+      loader.style.display = 'none';
+      mainContent.classList.add('page-loaded');
+    }, 500);
+  }, totalDuration);
 }
 
 /**

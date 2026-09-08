@@ -63,6 +63,93 @@
 }
 
 /* ==========================================================================
+   LOADING SCREEN
+   ========================================================================== */
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-terminal {
+  width: min(420px, 90vw);
+  background-color: var(--card-nested);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.loader-header {
+  background-color: var(--card);
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.loader-body {
+  padding: 1.25rem 1.25rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  min-height: 130px;
+}
+
+.loader-line {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.loader-line.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.loader-line .loader-prompt {
+  color: var(--accent);
+  font-weight: 700;
+  user-select: none;
+}
+
+.loader-line.success .loader-prompt {
+  color: var(--color-success);
+}
+
+.loader-progress-wrap {
+  margin: 0.5rem 1.25rem 1.25rem;
+  height: 3px;
+  background-color: var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.loader-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  border-radius: var(--radius-full);
+  transition: width 0.18s ease;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+}
+
+/* ==========================================================================
    RESET & BASE SETUP
    ========================================================================== */
 *, *::before, *::after {
