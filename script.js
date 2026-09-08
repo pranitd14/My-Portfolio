@@ -349,9 +349,9 @@ function initPageLoadAnimation() {
   const lines = [
     { text: 'Initializing Pranit Builds...', delay: 0 },
     { text: 'Loading portfolio...', delay: 520 },
-    { text: 'Loading skills...', delay: 820 },
-    { text: 'Loading projects...', delay: 1000 },
-    { text: 'System ready ✓', delay: 1180, success: true },
+    { text: 'Loading skills...', delay: 920 },
+    { text: 'Loading projects...', delay: 1100 },
+    { text: 'System ready ✓', delay: 1380, success: true },
   ];
 
   const progressSteps = [10, 35, 60, 82, 100];
